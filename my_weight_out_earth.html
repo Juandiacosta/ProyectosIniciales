@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poniendome en la balanza de otros planetas</title>
+</head>
+<body>
+    <h1>¿Alguna vez te has preguntado cuanto pesarias en otros mundos?</h1>
+    <h2>Muy bien acompañame en esta aventura por el Sistema Solar</h2>
+    <script>
+        var g_tierra = 9.8;
+        var g_mercurio = 3.7;
+        var g_venus = 8.87;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var g_saturno = 10.4;
+        var g_urano = 8.7;
+        var g_neptuno = 11.2;
+        peso_tierra = parseFloat(prompt("¿Cuanto pesas en la tiera?: "));
+        planeta_ideal = parseInt(prompt("¿En que planeta quieres vivir? 🤔\n1. Mercurio\n2. Venus\n3. Marte\n4. Jupiter\n5. Saturno\n6. Urano\n7. Neptuno"));
+        function planetas(gravedad, planeta)
+        {
+            peso_final = peso_tierra * gravedad / g_tierra
+            peso_final = (peso_final.toFixed(2));
+            document.write("Tu peso en " + planeta + " es " + peso_final + " kg");
+        }
+        if(planeta_ideal == 1)
+        {
+            planetas(g_mercurio, "mercurios")
+        }
+        else if(planeta_ideal == 2)
+        {
+            planetas(g_venus, "venus")
+        }
+        else if(planeta_ideal == 3)
+        {
+            planetas(g_marte, "marte")
+        }
+        else if(planeta_ideal == 4)
+        {
+            planetas(g_jupiter, "júpiter")
+        }
+        else if(planeta_ideal == 5)
+        {
+            planetas(g_saturno, "saturno")
+        }
+        else if(planeta_ideal == 6)
+        {
+            planetas(g_urano, "urano")
+        }
+        else if(planeta_ideal == 7)
+        {
+            planetas(g_neptuno, "neptuno")
+        }
+        else
+        {
+            document.write("Ese planeta no existe COOOÑOOO Digita bien🤬");
+        }
+    </script>
+</body>
+</html>
