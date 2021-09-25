@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujos Artisticos</title>
+    <style>
+        h1
+        {
+            color: red;
+            font-family: "Arial";
+            font-size: 130%;
+        }
+        strong
+        {
+            color: black;
+        }
+        canvas
+        {
+            background-color: black;
+        }
+        p
+        {
+            color:yellowgreen;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 86%;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Dibujando en Canvas</strong> xD</h1>
+    <p>¿Cuantas líneas quieres?
+        <input type="text" id="texto_lineas" />
+        <input type="button" value="A darle!" id="botoncito">
+    </p>
+    <canvas width="300" height="300" id="Ilustración"></canvas>
+    <script src="dibujo.js"></script>
+    <p>Así queda el dibujo 😎</p>
+</body>
+</html>
