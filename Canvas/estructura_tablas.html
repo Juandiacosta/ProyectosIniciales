@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en Canvas</title>
+</head>
+<body>
+    <h1>Contruyendo Tablas con Canvas</h1>
+    <p>¿Cuantas filas quieres?
+        <input type="text" id="filas">
+        <br>
+        ¿Cuantas columnas quieres? 
+        <input type="text" id="columnas">
+        <br>
+        ¿De que color quieres la tabla?
+        <input type="button" value="Azul marino" id="tablaAguaMarina" style="background-color: #03F5F7; color: white; border-style: none;" />
+        <input type="button" value="Beige" id="tablaBeige" style="background-color: beige; color: black; border-style: none;" />
+        <input type="button" value="Blanco" id="tablaBlanco" style="background-color: whitesmoke; color: black; border-style: none;" />
+        <br>
+        ¿De que color quieres las lineas?
+        <input type="button" value="Azul oscuro" id="azulOscuro" style="background-color: #5E01FF; color: whitesmoke; border-style: none;" />
+        <input type="button" value="Negro" id="negro" style="background-color: black; color: whitesmoke; border-style: none;" />
+        <input type="button" value="Rojo" id="rojo" style="background-color: #F7095C; color: whitesmoke; border-style: none;" />
+    </p>
+    <canvas width="250" height="100" id="base"></canvas>
+    <p>Tarán mira tu tabla</p>
+    <script src="diseno_tablas.js"></script>
+</body>
+</html>
