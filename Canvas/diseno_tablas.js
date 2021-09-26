@@ -60,24 +60,24 @@ function tablaBlanca()
     dibujaFondo("whitesmoke");
 }
 
-function calculoLineasVerticales()
-{
-    var espacioVertical = ancho / lineas;
-    for(l = 0; l < lineas; l++)
-    {
-        yiv = ((l * espacioVertical) + 10);
-        yfv = (250 - ((l * espacioVertical)+ 10));
-        dibujaFila(colorTrazo, 0, yiv, 250, yfv);
-    }
-}
+// function calculoLineasVerticales()
+// {
+//     var espacioVertical = ancho / lineas;
+//     for(l = 0; l < lineas; l++)
+//     {
+//         yiv = ((l * espacioVertical) + 10);
+//         yfv = (250 - ((l * espacioVertical)+ 10));
+//         dibujaFila(colorTrazo, 0, yiv, 250, yfv);
+//     }
+// }
 
-function lineasAzules()
-{
-    var lineas = parseInt(cantidadFilas.value);
-    //var l = 0;
-    var yih, yfh, xiv, xfv;
-    var colorTrazo = "#5E01FF";
+// function lineasAzules()
+// {
+//     var lineas = parseInt(cantidadFilas.value);
+//     //var l = 0;
+//     var yih, yfh, xiv, xfv;
+//     var colorTrazo = "#5E01FF";
 
-    calculoLineasVerticales();
-}
+//     calculoLineasVerticales();
+// }
 
