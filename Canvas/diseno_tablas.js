@@ -7,11 +7,13 @@ beige.addEventListener("click", tablaBeige);
 var blanco = document.getElementById("tablaBlanco");
 blanco.addEventListener("click", tablaBlanca);
 var oscuroAzul = document.getElementById("azulOscuro");
-oscuroAzul.addEventListener("click", lineasAzules);
-// var oscuroNegro = document.getElementById("negro");
-// oscuroNegro.addEventListener("click", lineasNegro);
-// var intensoRojo = document.getElementById("rojo");
-// intensoRojo.addEventListener("click", lineasRojas);
+oscuroAzul.addEventListener("click", filasAzules);
+var oscuroNegro = document.getElementById("negro");
+oscuroNegro.addEventListener("click", filasNegras);
+var intensoRojo = document.getElementById("rojo");
+intensoRojo.addEventListener("click", filasRojas);
+var probando = document.getElementById("rojo");
+probando.addEventListener("click", pruebaRapida)
 
 var estructura = document.getElementById("base");
 var ancho = estructura.width;
@@ -60,24 +62,73 @@ function tablaBlanca()
     dibujaFondo("whitesmoke");
 }
 
-// function calculoLineasVerticales()
-// {
-//     var espacioVertical = ancho / lineas;
-//     for(l = 0; l < lineas; l++)
-//     {
-//         yiv = ((l * espacioVertical) + 10);
-//         yfv = (250 - ((l * espacioVertical)+ 10));
-//         dibujaFila(colorTrazo, 0, yiv, 250, yfv);
-//     }
-// }
+function dibujaFilas(color, x_arranque, y_arranque, x_final, y_final)
+{
+    lienzo.beginPath();
+    lienzo.strokeStyle = color;
+    lienzo.lineWidth =2;
+    lienzo.moveTo(x_arranque, y_arranque);
+    lienzo.lineTo(x_final, y_final);
+    lienzo.stroke();
+    lienzo.closePath();
+}
 
-// function lineasAzules()
-// {
-//     var lineas = parseInt(cantidadFilas.value);
-//     //var l = 0;
-//     var yih, yfh, xiv, xfv;
-//     var colorTrazo = "#5E01FF";
+function filasAzules()
+{
+    var cantFilas = parseInt(cantidadFilas.value);
+    var yi, yf;
+    var espaciovertical = extenso / cantFilas;
 
-//     calculoLineasVerticales();
-// }
+    for(l = 0; l < cantFilas; l++)
+    {
+        yi = l * espaciovertical;
+        yf = l * espaciovertical;
+        dibujaFilas("#5E01FF", 0, yi, 250, yf);
+    }
 
+    dibujaFilas("#5E01FF", 0, 99, 250, 99);
+    dibujaFilas("#5E01FF", 0, 1, 250, 1);
+}
+
+function filasNegras()
+{
+    var cantFilas = parseInt(cantidadFilas.value);
+    var yi, yf;
+    var espaciovertical = extenso / cantFilas;
+
+    for(l = 0; l < cantFilas; l++)
+    {
+        yi = l * espaciovertical;
+        yf = l * espaciovertical;
+        dibujaFilas("black", 0, yi, 250, yf);
+    }    
+
+    dibujaFilas("black", 0, 99, 250, 99);
+    dibujaFilas("black", 0, 1, 250, 1);
+}
+
+function filasRojas()
+{
+    var cantFilas = parseInt(cantidadFilas.value);
+    var yi, yf;
+    var espaciovertical = extenso / cantFilas;
+
+    for(l = 0; l < cantFilas; l++)
+    {
+        yi = l * espaciovertical;
+        yf = l * espaciovertical;
+        dibujaFilas("#F7095C", 0, yi, 250, yf);
+    }    
+
+    dibujaFilas("#F7095C", 0, 99, 250, 99);
+    dibujaFilas("#F7095C", 0, 1, 250, 1);
+}
+
+function pruebaRapida()
+{
+    // var xx = 1;
+    // var yy = 2;
+    // var z = xx + yy;
+    // alert(z);
+    alert("Si funciona 🙌")
+}
