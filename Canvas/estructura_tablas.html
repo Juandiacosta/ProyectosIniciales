@@ -5,27 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablas en Canvas</title>
+    <style>
+        body
+        {
+            background-color: lightsalmon;
+        }
+        h1
+        {
+            color: whitesmoke;
+            font-family: monospace;
+            font-size: xx-large;
+            background-color: brown;
+        }
+        p
+        {
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            text-shadow: lightpink;
+        }
+    </style>
 </head>
 <body>
-    <h1>Contruyendo Tablas con Canvas</h1>
-    <p>¿Cuantas filas quieres?
-        <input type="text" id="filas">
+    <center><h1><strong>Construyendo Tablas con Canvas</strong></h1></center>
+    <p><strong>¿Cuantas filas quieres?</strong>
+        <input type="text" style="width: 60px; height: 13px;" style="text-align: left;" id="filas">
         <br>
-        ¿Cuantas columnas quieres? 
-        <input type="text" id="columnas">
         <br>
-        ¿De que color quieres la tabla?
+        <strong>¿Cuantas columnas quieres?</strong>  
+        <input type="text" style="width: 60px; height: 13px;" id="columnas">
+        <br>
+        <br>
+        <strong>¿De que color quieres la tabla?</strong> 
         <input type="button" value="Azul marino" id="tablaAguaMarina" style="background-color: #03F5F7; color: white; border-style: none;" />
         <input type="button" value="Beige" id="tablaBeige" style="background-color: beige; color: black; border-style: none;" />
         <input type="button" value="Blanco" id="tablaBlanco" style="background-color: whitesmoke; color: black; border-style: none;" />
         <br>
-        ¿De que color quieres las lineas?
+        <br>
+        <strong>¿De que color quieres las lineas?</strong> 
         <input type="button" value="Azul oscuro" id="azulOscuro" style="background-color: #5E01FF; color: whitesmoke; border-style: none;" />
         <input type="button" value="Negro" id="negro" style="background-color: black; color: whitesmoke; border-style: none;" />
         <input type="button" value="Rojo" id="rojo" style="background-color: #F7095C; color: whitesmoke; border-style: none;" />
     </p>
-    <canvas width="250" height="100" id="base"></canvas>
-    <p>Tarán mira tu tabla</p>
+    <br>
+    <canvas width="400" height="300" id="base"></canvas>
+    <p><strong>Tarán mira tu tabla</strong></p>
     <script src="diseno_tablas.js"></script>
 </body>
 </html>
