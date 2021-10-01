@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibuja con el Mouse</title>
+    <link rel="stylesheet" href="estilo.css"> <!--Esto es para vincular el archivo css donde se esta creando los estilos-->
+    <style>
+        body{
+            background-color: lightsalmon;
+        }
+        h1{
+            color: whitesmoke;
+            font-size: x-large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        canvas{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Dibuja con el mouse, mante oprimido el click y muevelo a donde quieras dentro del lienzo blanco</center></h1>
+    <center><canvas width="1350" height="600" id="base_de_dibujo"></canvas><br>
+    <input type="color" id="color" oninput="defcolor(this.value);"> <!--Este input le permite al usuario seleccionar el color de su preferencia-->
+    <input type="range" id="grosor" oninput="defgrosor(this.value);" min="2" max="10" value="2"><!--Este input le permite al usuario seleccionar el grosor para el trazo-->
+    <input type="button" value="Da click aquí para borrar" style="background-color: black; color: whitesmoke; font-family: monospace;" id="botoncito"></center>
+    <script src="proyectoMouse.js"></script> <!--Siempre dejar el js antes del cierre del body-->
+</body>
+</html>
