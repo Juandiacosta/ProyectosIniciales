@@ -2,7 +2,7 @@ var teclas = {
     UP: 38,
     DOWN: 40,
     LEFT: 37,
-    RIGHT: 39,
+    RIGHT: 39
     // ARR: "w",
     // ABJ: "s",
     // IZQ: "a",
